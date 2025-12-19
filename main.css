@@ -142,8 +142,8 @@ input:checked + .slider:before { transform: translateX(20px); }
 .btn-download:hover { background: #0e2c2e; transform: translateY(-2px); }
 
 .hero-image { 
-    flex: 0 0 700px; /* Zajmuje drugą połowę strony */
-    border-radius: 0; /* Obraz wypełnia prawą stronę do krawędzi */
+    padding-right: calc((100% - var(--container-width)) / 2);
+    border-radius: 0;
     min-height: 400px;
     background-size: cover;
     background-position: center;
@@ -281,7 +281,7 @@ input:checked + .slider:before { transform: translateX(20px); }
 }
 
 /* RWD dla telefonów */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .benefits-detailed {
         padding: 50px 0;
     }
