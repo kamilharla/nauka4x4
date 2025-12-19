@@ -1,151 +1,242 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGH Szkoła Doktorska - Nauka Napęd 4x4</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>SZYBKI START Z BRACKETS</title>
-        <meta name="description" content="Interaktywny poradnik szybkiego startu dla Brackets.">
-        <link rel="stylesheet" href="main.css">
-    </head>
-    <body>
+<div class="lang-bar">
+    <div class="container"> 
+        <div class="school-name">
+            <h1 class="pl">SGH Szkoła Doktorska</h1>
+            <h1 class="en">SGH Doctoral School</h1>
+        </div>
+        <div class="lang-control">
+            <span>PL</span>
+            <label class="switch">
+                <input type="checkbox" id="langToggle" onchange="toggleLang()">
+                <span class="slider"></span>
+            </label>
+            <span>EN</span>
+        </div>
+    </div>
+</div>
 
-		<h1>SZYBKI START Z BRACKETS</h1>
-		<h2>Oto Twój przewodnik!</h2>
-		
-		<!--
-			WYKONANO PRZY UŻYCIU <3 I JAVASCRIPTU
-		-->
-		
-		<p>
-			Witaj we wczesnej wersji Brackets, edytorze open-source dla sieci nowej generacji. Jesteśmy
-			wielkimi fanami standardów i chcemy budować lepsze narzędzia dla takich języków jak JavaScript,
-			HTML i CSS oraz powiązanych z nimi technologii sieciowych. Taki był nasz skromny początek.
-		</p>
-		
-		<!--
-			CZYM JEST BRACKETS?
-		-->
-		<p>
-			<em>Patrzysz na wczesną wersję Brackets.</em>
-			Na wiele sposobów Brackets jest inny niż typowy edytor. Jedną z różnic jest to, że edytor ten
-			został napisany w języku JavaScript. Tak więc, mimo iż może on nie być jeszcze gotowy do
-			codziennego użytku, my używamy go codziennie, by budować Brackets.
-		</p>
-		
-		
-		<h2>Testujemy kilka nowych rzeczy</h2>
-		
-		<!--
-			POWIĄZANIE POMIĘDZY HTML, CSS i JAVASCRIPT
-		-->
-		<h3>Szybka edycja CSS i JavaScript</h3>
-		<p>
-			Podczas edycji HTMLa użyj skrótu <kbd>Cmd/Ctrl + E</kbd> aby otworzyć szybki wbudowany edytor,
-			który wyświetli wszystkie powiązane style CSS. Wykonaj modyfikacje w kodzie CSS, wciśnij <kbd>ESC</kbd>
-			i wróć do edycji HTML. Możesz również pozostawić wbudowany edytor otwarty, tak aby stał się częścią
-			edytora HTML. Jeśli wciśniesz <kbd>ESC</kbd> poza obszarem szybkiego edytora, jego wszystkie okna
-			zostaną zamknięte. Koniec z przełączaniem się pomiędzy dokumentami i byciem wyrwanym z kontekstu.
-		</p>
-		
-		<samp>
-			Chcesz go zobaczyć w akcji? Umieść kursor w tagu <!-- <samp> --> i naciśnij <kbd>Cmd/Ctrl + E</kbd>.
-			Szybki edytor CSS pojawi się nad tym tagiem. Po prawej stronie zobaczysz listę wszystkich reguł,
-			które są powiązane z tym tagiem. Przełączaj się pomiędzy regułami używając skrótu <kbd>Alt + Góra/Dół</kbd>
-			aby znaleźć ten, który chcesz edytować.
-		</samp>
-		
-        <!--
-		<a href="screenshots/quick-edit.png">
-			<img alt="Zrzut ekranu pokazujący szybką edycję CSS" src="screenshots/quick-edit.png" />
-		</a>
-		-->
+<section class="hero">
+    <div class="hero-text">
+        <h1 class="pl">NAUKA NAPĘD 4x4</h1>
+        <h1 class="en">RESEARCH 4x4 DRIVE</h1>
         
-		<p>
-			Możesz użyć tego samego skrótu w kodzie JavaScript, aby zobaczyć kod funkcji, którą przywołujesz,
-			poprzez umieszczenie kursora na nazwie funkcji. W ten sam sposób możesz również otworzyć narzędzie
-			wybierania koloru. Po prostu umieść kursor na dowolnym kolorze zapisanym w formacie hex, rgb lub hsl.
-			Na razie wbudowany szybki edytor nie może być niezagnieżdżony, więc możesz używać go jedynie w "pełnowymiarowym"
-			edytorze.
-		</p>
-		
-		<!--
-			BŁYSKAWICZNY PODGLĄD
-		-->
-		<h3>Zmiany w kodzie CSS widoczne na żywo w przeglądarce</h3>
-		<p>
-			Zapewne znany Ci jest taniec w stylu "zapisz/przeładuj", który wykonywaliśmy przez ostatnie lata.
-			Dokonujesz zmian w edytorze, zapisujesz zmiany, przełączasz się do przeglądarki i odświeżasz stronę,
-			by w końcu zobaczyć rezultat Twojej pracy. Z Brackets taki taniec nie jest konieczny.
-		</p>
-		<p>
-			Brackets utworzy <em>połączenie na żywo</em> z Twoją lokalną przeglądarką i będzie jej przekazywał
-			wszelkie zmiany w CSS. Być może już dzisiaj korzystasz z podobnego rozwiązania przy użyciu narzędzi
-			w przeglądarce, jednak z Brackets nie ma potrzeby wklejania kodu CSS z powrotem do edytora. Twój kod
-			działa w przeglądarce, ale żyje w edytorze.
-		</p>
-		
-		<samp>
-			Jeśli posiadasz zainstalowaną przeglądarkę Google Chrome, możesz wypróbować to już teraz. Kliknij
-			ikonkę błyskawicy (stąd nazwa: Błyskawiczny Podgląd) w prawym górnym rogu lub naciśnij skrót
-			<kbd>Cmd/Ctrl + Alt + P</kbd>. Kiedy Błyskawiczny Podgląd zostanie włączony w dokumencie HTML,
-			wszystkie połączone z nim pliki CSS mogą być edytowane w czasie rzeczywistym. Ikona zmieni kolor
-			z szarej na złotą gdy Błyskawiczny Podgląd nawiąże połączenie z Twoją przeglądarką.
-			
-			Teraz umieść kursor na tagu <!-- <img> --> i wciśnij <kbd>Cmd/Ctrl + E</kbd> aby otworzyć zdefiniowane
-			style CSS dla tego tagu. Spróbuj zmienić rozmiar obramowania z 10px do 20px lub zmienić kolor tła
-			z "transparent" na "hotpink". Jeśli masz umieszczone okna przeglądarki i Brackets obok siebie
-			zobaczysz, że zmiany są natychmiast uwzględniane w przeglądarce. Nieźle, co?
-		</samp>
-				
-		<p class="note">
-			Na dzień dzisiejszy Błyskawiczny Podgląd działa jedynie dla plików CSS. Aktualnie pracujemy nad tym,
-			aby dodać obsługę plików HTML i JavaScript. W aktualnej wersji zmiany w plikach HTML lub JavaScript
-			są automatycznie uwzględniane w momencie zapisu. Błyskawiczny Podgląd działa jedynie z Google Chrome.
-			Pragniemy wprowadzić tą funkcję we wszystkich najważniejszych przeglądarkach i mamy nadzieję na
-			współpracę ze strony autorów tych przeglądarek, by stało się to faktem.
-		</p>
-		
-		<!--
-			DAJ ZNAĆ CO O TYM SĄDZISZ
-		-->
-		<h2>Zaangażuj się</h2>
-		<p>
-			Brackets jest projektem open-source. Web developerzy z całego świata angażują się, by budować coraz
-			to lepszy edytor kodu. Daj nam znać co o nim sądzisz, podziel się swoimi pomysłami lub dodaj coś
-			bezpośrednio do projektu.
-		</p>
-		<ul>
-			<li><a href="http://brackets.io">Brackets.io</a></li>
-			<li><a href="http://blog.brackets.io">Blog Zespołu Brackets</a></li>
-			<li><a href="http://github.com/adobe/brackets">Brackets na GitHub</a></li>
-			<li><a href="http://github.com/adobe/brackets/wiki">Brackets Wiki</a></li>
-			<li><a href="http://groups.google.com/group/brackets-dev">Developerska Lista Mailingowa Brackets</a></li>
-			<li><a href="https://twitter.com/#!/brackets">@Brackets na Twitterze</a></li>
-			<li>Czatuj z developerami Brackets na IRCu w kanale #brackets na Freenode.</li>
-		</ul>
+        <p class="pl">Program organizacji studiow doktoranckich w 4 punktach:</p>
+        <p class="en">A 4-point doctoral organization program:</p>
+        
+        <ul class="pl">
+            <li><span>pisanie rozprawy</span></li>
+            <li><span>aktywność naukowa</span></li>
+            <li><span>aktywność międzynarodowa</span></li>
+            <li><span>integracja</span></li>
+        </ul>
+        
+        <ul class="en">
+            <li><span>dissertation writing</span></li>
+            <li><span>science activity</span></li>
+            <li><span>international activity</span></li>
+            <li><span>integration</span></li>
+        </ul>
+        
+        <a class="btn-download pl">POBIERZ PROGRAM (PDF)</a>
+        <a class="btn-download en">DOWNLOAD PROGRAM (PDF)</a>
+    </div>
+    <div class="hero-image">
+        <img src="LandingPagePhoto.png" alt="Zarząd" style="width: 100%; height: auto;">
+    </div>
+</section>
 
-    </body>
+<section class="tabs-section">
+    <div class="container">
+        <h2 class="pl">Co zawiera program?</h2>
+        <h2 class="en">What's Inside?</h2>
+        <div class="tabs-nav ">
+            <button class="tab-btn tab-card" onclick="showTab(0)"> 
+                <span class="pl">Pisanie rozprawy</span><span class="en">Dissertation writing</span>
+            </button>
+            <button class="tab-btn tab-card" onclick="showTab(1)">
+                <span class="pl">Aktywność naukowa</span><span class="en">Science activity</span>
+            </button>
+            <button class="tab-btn tab-card" onclick="showTab(2)">
+                <span class="pl">Aktywność międzynarodowa</span><span class="en">International activity</span>
+            </button>
+            <button class="tab-btn tab-card" onclick="showTab(3)">
+                <span class="pl">Integracja</span><span class="en">Integration</span>
+            </button>
+        </div>
+        <div id="tab-content" class="tab-content"></div>
+    </div>
+</section>
+    
+<section class="benefit-section">
+    <div class="container">
+        <h1 class="pl">Co zyskasz popierając program?</h1>
+        <h1 class="en">What will you gain by supporting the program?</h1>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3 class="pl">Skuteczny doktorat</h3>
+                <h3 class="en">Effective PhD</h3>
+                <p class="pl">Jasne ścieżki proceduralne i wsparcie merytoryczne na każdym etapie pisania rozprawy.</p>
+                <p class="en">Clear procedural paths and substantive support at every stage of writing your dissertation.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                </div>
+                <h3 class="pl">Wsparcie publikacyjne</h3>
+                <h3 class="en">Publication Support</h3>
+                <p class="pl">Ułatwiony dostęp do funduszy na monografie, artykuły i konferencje naukowe.</p>
+                <p class="en">Easier access to funding for monographs, articles, and scientific conferences.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <h3 class="pl">Realny wpływ</h3>
+                <h3 class="en">Real Impact</h3>
+                <p class="pl">Aktywna reprezentacja interesów doktorantów w organach Szkoły Doktorskiej SGH.</p>
+                <p class="en">Active representation of doctoral students' interests in the SGH Doctoral School bodies.</p>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                </div>
+                <h3 class="pl">Silna integracja</h3>
+                <h3 class="en">Strong Integration</h3>
+                <p class="pl">Budowanie sieci kontaktów i współpraca między rocznikami oraz dyscyplinami.</p>
+                <p class="en">Building a network of contacts and cooperation between years and disciplines.</p>
+            </div>
+        </div>
+    </div>
+</section>
+    
+<section class="footer">
+    <div class="container">
+        <p>@Copyright 2025-2026 Komitet wyborczy kandydata na przewodniczącego Kamila Harli</p>
+    </div>
+</section>
+    
+
+<script>
+const contentData = [
+    {
+        pl: `<ul>
+                <li><b>Baza promotorów:</b> Interaktywna lista dostępnych promotorów wraz z ich specjalizacjami i aktualną liczbą doktorantów.</li>
+                <li><b>Standardy relacji:</b> Cykl szkoleń i wdrożenie jasnego regulaminu praw oraz obowiązków na linii doktorant–promotor.</li>
+                <li><b>Warsztat naukowy:</b> Praktyczne warsztaty z narzędzi wspomagających pisanie (LaTeX, Zotero, Git) oraz technik pisania rozprawy.</li>
+                <li><b>Science coaching:</b> Program wsparcia w planowaniu kamieni milowych rozprawy i zarządzaniu projektem badawczym.</li>
+            </ul>`,
+        en: `<ul>
+                <li><b>Supervisor Database:</b> An interactive list of available supervisors with their specializations and current number of doctoral students.</li>
+                <li><b>Relationship Standards:</b> A series of training sessions and the implementation of clear regulations on rights and duties between PhD students and supervisors.</li>
+                <li><b>Scientific Workshop:</b> Practical workshops on writing tools (LaTeX, Zotero, Git) and dissertation writing techniques.</li>
+                <li><b>Science Coaching:</b> A support program for planning dissertation milestones and managing research projects.</li>
+            </ul>`
+    },
+    {
+        pl: `<ul>
+                <li><b>Projekt „Aktywny doktorant”:</b> Inicjatywa angażowania doktorantów w wydarzenia naukowe na podstawie tematów ich rozpraw.</li>
+                <li><b>Platforma konferencyjna:</b> Baza polecanych konferencji krajowych i zagranicznych z podziałem na dyscypliny.</li>
+                <li><b>Inicjatywa Wydawnicza:</b> Cykliczne konferencje Szkoły Doktorskiej kończące się publikacją recenzowanych monografii.</li>
+                <li><b>Projekt „Synergia”:</b> Systemowa współpraca doktorantów z Kołami Naukowymi (SKN), umożliwiająca wspólne prowadzenie projektów.</li>
+            </ul>`,
+        en: `<ul>
+                <li><b>"Active PhD" Project:</b> An initiative to engage doctoral students in scientific events based on their dissertation topics.</li>
+                <li><b>Conference Platform:</b> A database of recommended national and international conferences divided by disciplines.</li>
+                <li><b>Publishing Initiative:</b> Cyclical conferences of the Doctoral School resulting in the publication of peer-reviewed monographs.</li>
+                <li><b>"Synergy" Project:</b> Systemic cooperation between doctoral students and Student Research Groups (SKN) for joint research projects.</li>
+            </ul>`
+    },
+    {
+        pl: `<ul>
+                <li><b>Sieć CIVICA:</b> Finansowe i organizacyjne wsparcie dla oddolnych projektów badawczych realizowanych z doktorantami z uczelni partnerskich.</li>
+                <li><b>Współpraca ze Szkołami Doktorskimi:</b> Integracja między uczelniami w celu wspólnych projektów i wymian doktoranckich.</li>
+                <li><b>Współpraca Research-Business:</b> Nawiązanie kontaktów z partnerami biznesowymi w celu organizacji projektów i konferencji.</li>
+                <li><b>Aktywność medialna:</b> Organizacja profesjonalnego przekazu medialnego samorządu w celu promowania inicjatyw naukowych.</li>
+            </ul>`,
+        en: `<ul>
+                <li><b>CIVICA Network:</b> Financial and organizational support for bottom-up research projects carried out with PhD students from partner universities.</li>
+                <li><b>Cooperation with Doctoral Schools:</b> Integration between universities for joint projects and doctoral exchanges.</li>
+                <li><b>Research-Business Cooperation:</b> Establishing contacts with business partners to organize joint projects and conferences.</li>
+                <li><b>Media Activity:</b> Organizing professional media communication of the council to promote scientific initiatives.</li>
+            </ul>`
+    },
+    {
+        pl: `<ul>
+                <li><b>Coworking:</b> Wypracowanie przestrzeni w SGH przeznaczonej wyłącznie do wspólnej pracy i networkingu doktorantów.</li>
+                <li><b>Spotkania naukowe:</b> Regularne spotkania dyskusyjne i debaty oksfordzkie pozwalające na wymianę myśli między dyscyplinami.</li>
+                <li><b>Integracja:</b> Organizacja cyklicznych wyjazdów szkoleniowo-integracyjnych oraz nieformalnych wyjść.</li>
+                <li><b>Pakiet Benefitów:</b> Rozszerzenie dostępu do programów sportowych (Multisport) oraz kulturalnych dla doktorantów.</li>
+            </ul>`,
+        en: `<ul>
+                <li><b>Coworking:</b> Developing a space at SGH dedicated exclusively to joint work and networking for doctoral students.</li>
+                <li><b>Scientific Meetings:</b> Regular discussion meetings and Oxford debates allowing for the exchange of ideas between disciplines.</li>
+                <li><b>Integration:</b> Organizing cyclical training-integration trips and informal outings.</li>
+                <li><b>Benefit Package:</b> Expanding access to sports programs (Multisport) and cultural events dedicated to PhD students.</li>
+            </ul>`
+    }
+];
+
+    let currentLang = 'pl';
+
+    function showTab(index) {
+        const btns = document.querySelectorAll('.tab-btn');
+        btns.forEach((b, i) => b.classList.toggle('active', i === index));
+        document.getElementById('tab-content').innerHTML = `<p>${contentData[index][currentLang]}</p>`;
+    }
+
+    function toggleLang() {
+        const isEn = document.getElementById('langToggle').checked;
+        currentLang = isEn ? 'en' : 'pl';
+        
+        // Zarządzanie widocznością z uwzględnieniem typu elementu
+        document.querySelectorAll('.pl').forEach(el => {
+            if (el.tagName === 'A') el.style.display = isEn ? 'none' : 'inline-block';
+            else el.style.display = isEn ? 'none' : 'block';
+        });
+        
+        document.querySelectorAll('.en').forEach(el => {
+            if (el.tagName === 'A') el.style.display = isEn ? 'inline-block' : 'none';
+            else el.style.display = isEn ? 'block' : 'none';
+        });
+        
+        showTab(0);
+    }
+
+    // Inicjalizacja
+    showTab(0);
+</script>
+
+</body>
 </html>
-<!--
-
-    [[[[[[[[[[[[[[[      ]]]]]]]]]]]]]]]
-    [::::::::::::::      ::::::::::::::]
-    [::::::::::::::      ::::::::::::::]
-    [::::::[[[[[[[:      :]]]]]]]::::::]
-    [:::::[                      ]:::::]
-    [:::::[                      ]:::::]
-    [:::::[                      ]:::::]
-    [:::::[                      ]:::::]
-    [:::::[     CODE THE WEB     ]:::::]
-    [:::::[  http://brackets.io  ]:::::]
-    [:::::[                      ]:::::]
-    [:::::[                      ]:::::]
-    [:::::[                      ]:::::]
-    [:::::[                      ]:::::]
-    [::::::[[[[[[[:      :]]]]]]]::::::]
-    [::::::::::::::      ::::::::::::::]
-    [::::::::::::::      ::::::::::::::]
-    [[[[[[[[[[[[[[[      ]]]]]]]]]]]]]]]
-
--->
