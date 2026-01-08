@@ -1,0 +1,534 @@
+/* ========================================
+   ZMIENNE CSS
+======================================== */
+:root {
+    --sgh-accent: #007481; 
+    --sgh-blue: #007481;   
+    --sgh-dark: #0e2c2e;
+    --text-dark: #333;
+    --text-light: #cbd5e0;
+    --white: #fff;
+    --light-gray: #f4f4f4;
+    --container-width: 1400px;
+    --border-radius: 12px;
+    --transition: 0.3s ease;
+}
+
+/* ========================================
+   RESET & TYPOGRAFIA
+======================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: 'Open Sans', sans-serif; 
+    margin: 0; 
+    padding: 0;
+    color: var(--text-dark); 
+    line-height: 1.6; 
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* ========================================
+   KONTENER
+======================================== */
+.container { 
+    width: 90%;
+    max-width: var(--container-width); 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* ========================================
+   HEADER & LANG BAR
+======================================== */
+.lang-bar { 
+    background-color: var(--sgh-accent); 
+    color: var(--white); 
+    padding: 1rem 0; 
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lang-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.school-name h1 {
+    margin: 0;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 700;
+    color: var(--white);
+}
+
+/* TOGGLE SWITCH */
+.lang-control { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    font-size: 0.85rem; 
+    font-weight: 600; 
+}
+
+.switch { 
+    position: relative; 
+    display: inline-block; 
+    width: 50px; 
+    height: 26px; 
+}
+
+.switch input { 
+    opacity: 0; 
+    width: 0; 
+    height: 0; 
+}
+
+.slider { 
+    position: absolute; 
+    cursor: pointer; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background-color: rgba(255, 255, 255, 0.3); 
+    transition: var(--transition); 
+    border-radius: 26px; 
+    border: 2px solid var(--white); 
+}
+
+.slider::before { 
+    position: absolute; 
+    content: ""; 
+    height: 18px; 
+    width: 18px; 
+    left: 3px; 
+    bottom: 2px; 
+    background-color: var(--white); 
+    transition: var(--transition); 
+    border-radius: 50%; 
+}
+
+input:checked + .slider { 
+    background-color: var(--white); 
+}
+
+input:checked + .slider::before { 
+    transform: translateX(24px); 
+    background-color: var(--sgh-blue);
+}
+
+/* ========================================
+   HERO SECTION
+======================================== */
+.hero { 
+    display: flex; 
+    width: 100%; 
+    min-height: 80vh;
+    align-items: stretch; 
+}
+
+.hero-text { 
+    flex: 1 1 50%;
+    padding: clamp(40px, 8vw, 80px) clamp(20px, 5%, 60px);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    background-color: var(--white);
+}
+
+.hero-text h1 { 
+    color: var(--sgh-blue); 
+    font-size: clamp(2rem, 5vw, 3.5rem); 
+    margin-bottom: 1.5rem; 
+    line-height: 1.1;
+}
+
+.hero-text p { 
+    font-size: clamp(1.1rem, 2vw, 1.5rem); 
+    margin-bottom: 1.5rem; 
+}
+
+.hero-text ul {
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+}
+
+.hero-text li {
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 0.5rem;
+}
+
+.hero-text li::before {
+    content: '•';
+    position: absolute;
+    left: -1rem;
+    color: var(--sgh-accent);
+    font-weight: bold;
+}
+
+.btn-download { 
+    background: var(--sgh-blue); 
+    color: var(--white); 
+    padding: 1rem 2rem; 
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    border-radius: 6px; 
+    font-weight: 700; 
+    display: inline-block;
+    transition: var(--transition);
+    text-align: center;
+    border: 2px solid var(--sgh-blue);
+    max-width: 350px;
+}
+
+.btn-download:hover,
+.btn-download:focus { 
+    background: var(--sgh-dark); 
+    border-color: var(--sgh-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 116, 129, 0.3);
+}
+
+.hero-image { 
+    flex: 1 1 50%;
+    background-color: var(--light-gray);
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ========================================
+   TABS SECTION
+======================================== */
+.tabs-section { 
+    padding: clamp(40px, 8vw, 80px) 0; 
+    background: var(--sgh-dark); 
+}
+
+.tabs-section h2 { 
+    text-align: center;
+    color: var(--white);
+    margin-bottom: clamp(30px, 5vw, 50px);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.tabs-nav { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem; 
+    margin-bottom: 2rem; 
+}
+
+.tab-btn { 
+    padding: 1.5rem 1rem; 
+    border: none; 
+    background: var(--white); 
+    font-weight: 600; 
+    border-bottom: 4px solid transparent;
+    transition: var(--transition);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+}
+
+.tab-btn:hover {
+    background: var(--light-gray);
+    transform: translateY(-2px);
+}
+
+.tab-btn.active { 
+    border-bottom-color: var(--sgh-accent); 
+    color: var(--sgh-accent); 
+    background: var(--light-gray);
+}
+
+.tab-content { 
+    background: var(--white); 
+    padding: clamp(25px, 5vw, 45px); 
+    border-radius: var(--border-radius); 
+    min-height: 250px; 
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.tab-content ul {
+    padding-left: 0;
+}
+
+.tab-content li {
+    margin-bottom: 1.25rem;
+    padding-left: 1rem;
+    line-height: 1.7;
+}
+
+.tab-content b {
+    color: var(--sgh-blue);
+    font-weight: 700;
+}
+
+/* ========================================
+   BENEFITS SECTION
+======================================== */
+.benefit-section {
+    padding: clamp(50px, 10vw, 100px) 0;
+    background-color: var(--white);
+}
+
+.benefit-section h2 {
+    text-align: center;
+    color: var(--sgh-blue);
+    margin-bottom: clamp(40px, 6vw, 60px);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.benefits-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 2rem; 
+}
+
+.benefit-card {
+    background: var(--sgh-dark);
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--sgh-accent);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    padding: 18px;
+    transition: var(--transition);
+}
+
+.benefit-card:hover .benefit-icon {
+    transform: scale(1.1);
+    background-color: var(--sgh-blue);
+}
+
+.benefit-card h3 {
+    color: var(--white);
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    margin-bottom: 1rem;
+}
+
+.benefit-card p {
+    font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+    color: var(--text-light);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+.footer {
+    padding: 2.5rem 0;
+    text-align: center;
+    background: var(--light-gray);
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* ========================================
+   LOGIKA JĘZYKOWA
+======================================== */
+.pl { 
+    display: block; 
+}
+
+.en { 
+    display: none; 
+}
+
+a.pl,
+span.pl { 
+    display: inline-block; 
+}
+
+body.lang-en .pl { 
+    display: none !important; 
+}
+
+body.lang-en .en { 
+    display: block !important; 
+}
+
+body.lang-en a.en,
+body.lang-en span.en { 
+    display: inline-block !important; 
+}
+
+/* ========================================
+   MEDIA QUERIES
+======================================== */
+
+/* Tablet landscape and below */
+@media (max-width: 1024px) {
+    .hero-text,
+    .hero-image {
+        flex: 1 1 100%;
+    }
+    
+    .tabs-nav {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet portrait and below */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-text {
+        padding: 3rem 5%;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .hero-text ul {
+        text-align: left;
+        max-width: 500px;
+    }
+
+    .hero-image {
+        display: none;
+    }
+    
+    .tabs-nav {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 0 15px;
+    }
+    
+    .lang-bar .container {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .school-name h1 {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+    
+    .hero-text {
+        padding: 2rem 5%;
+    }
+    
+    .hero-text ul {
+        padding-left: 1rem;
+    }
+    
+    .tab-btn {
+        padding: 1.25rem 0.75rem;
+        font-size: 0.95rem;
+    }
+    
+    .tab-content {
+        padding: 1.5rem;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefit-card {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 400px) {
+    .hero-text h1 {
+        font-size: 1.75rem;
+    }
+    
+    .btn-download {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .tabs-section h2,
+    .benefit-section h2 {
+        font-size: 1.5rem;
+    }
+}
